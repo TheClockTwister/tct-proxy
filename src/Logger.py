@@ -4,7 +4,7 @@ import os
 
 
 class Logger(logging.Logger):
-    def __init__(self, name: str, log_file: str = "logs/logs.txt", log_level: Union[str, int] = "INFO"):
+    def __init__(self, name: str, log_file: str = "logs/server.log", log_level: Union[str, int] = "INFO"):
         super().__init__(name)
 
         self.setLevel(logging.DEBUG)

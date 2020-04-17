@@ -12,6 +12,9 @@ src/config.json
 # IDE
 .idea/
 
+# design
+design/
+
 # Logs
 **/*.log
 
