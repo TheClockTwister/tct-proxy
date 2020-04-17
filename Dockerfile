@@ -8,6 +8,7 @@ RUN apt-get install -y python3 python3-pip nginx
 
 RUN pip3 install requests
 
+RUN mkdir /app/logs
 ADD src /app
 
 WORKDIR /app
