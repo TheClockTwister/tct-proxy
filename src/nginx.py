@@ -1,10 +1,19 @@
+"""
+This file contains the NginxConfigCreator class used to generate the Nginx config
+(at /etc/nginx/sites-enabled/default) from the more simplistic JSON config file.
+"""
+
 import os
 
 from Logger import logger
 
 
 class NginxConfigCreator:
+    """ This class is used to generate a new Nginx config file """
+
     class Site:
+        """ A Python representation of the JSON object for a new host/subdomain entry. """
+
         def __init__(self, domain, host, type, cloudflare, endpoint):
             self.domain = domain
             self.host = host

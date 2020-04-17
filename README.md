@@ -22,7 +22,14 @@ hosted inside a single container with nothing needed except the configuration fi
 
 ## Deployment & Set-Up
 ### Docker
-Just start a container: `docker run --restart always -p <YOUR_PORT>:80 theclocktwister/reverse-proxy:latest`
+Just start a container, specifying your config file and deployment port:
+ ```
+docker run 
+--restart always
+-p <YOUR_PORT>:80
+-v <YOUR_CONFIG>:/app/config.json
+theclocktwister/reverse-proxy:latest
+```
 
 Since this is your main web server, you should add `--restart always` to your Docker command.
 
