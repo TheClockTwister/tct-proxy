@@ -6,7 +6,6 @@ on one single host (with one IP address). To minimize the set-up effort and
 further maximize compatibility and portability, the whole application can be 
 hosted inside a single container with nothing needed except the configuration file.
 
-![Deployment image](picture.png)
 
 
 ## Features
@@ -21,8 +20,15 @@ hosted inside a single container with nothing needed except the configuration fi
 - Auto-configuration for CloudFlare
 - Enable/Disable auto-restart on config change at will
 
+## Deployment & Set-Up
+### Docker
+Just start a container: `docker run --restart always -p <YOUR_PORT>:80 theclocktwister/reverse-proxy:latest`
 
-## The configuration file
+Since this is your main web server, you should add `--restart always` to your Docker command.
+
+![Deployment image](picture.png)
+
+### The configuration file
 A typical configuration looks as follows:
 ```json
 {
